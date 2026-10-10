@@ -1,0 +1,12 @@
+# Ignore local datasets
+vip/
+vdataset/
+train/
+valid/
+test/
+*.zip
+
+# Python/IDE junk
+__pycache__/
+.venv/
+.vscode/
