@@ -1,9 +1,6 @@
-# Ignore local datasets
+images/
+labels/
 vip/
-vdataset/
-train/
-valid/
-test/
 *.zip
 
 # Python/IDE junk
