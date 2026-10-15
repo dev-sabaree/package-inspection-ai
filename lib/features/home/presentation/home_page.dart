@@ -1,7 +1,7 @@
-﻿
 import 'package:flutter/material.dart';
 
 import '../../inspection/presentation/inspection_page.dart';
+import '../../inspection/presentation/live_camera_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,17 +19,13 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 32),
-            const Icon(
-              Icons.inventory_2_outlined,
-              size: 80,
-            ),
+            const Icon(Icons.inventory_2_outlined, size: 80),
             const SizedBox(height: 20),
             Text(
               'Smart Package Inspection',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+              style: Theme.of(context).textTheme.headlineSmall
+                  ?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             const Text(
@@ -48,6 +44,19 @@ class HomePage extends StatelessWidget {
               },
               icon: const Icon(Icons.document_scanner_outlined),
               label: const Text('Start Inspection'),
+            ),
+            const SizedBox(height: 12),
+            OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (_) => const LiveCameraPage(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.camera_alt_outlined),
+              label: const Text('Live Camera Inspection'),
             ),
             const SizedBox(height: 12),
             OutlinedButton.icon(

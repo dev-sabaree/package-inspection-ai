@@ -1,0 +1,3 @@
+# Optional runtime required only when YOLO_MODEL_PATH points to compatible weights.
+-r requirements.txt
+ultralytics>=8.3,<9.0
