@@ -4,4 +4,7 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Development-only: permits an emulator to call a local HTTP backend.
+         Release builds should use an HTTPS API endpoint. -->
+    <application android:usesCleartextTraffic="true" />
 </manifest>

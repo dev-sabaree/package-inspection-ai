@@ -43,6 +43,32 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/.kotlin/
+
+# Backend Python and model artifacts
+backend/.venv/
+backend/models/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.pytest_cache/
 
 # Widget Preview related
 .widget_preview/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+**/config.local.py
+**/*.bak
+
+# Python local artifacts
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+
+# Local test images (remove this rule if you intentionally want to share them)
+test_parcel.jpg
